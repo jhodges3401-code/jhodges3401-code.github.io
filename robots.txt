@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jhodges3401-code.github.io/sitemap.xml
+Sitemap: https://jhodges3401-code.github.io/okayline-demo/sitemap.xml
+Sitemap: https://jhodges3401-code.github.io/kudoshelf-demo/sitemap.xml
+Sitemap: https://jhodges3401-code.github.io/proposeroo/sitemap.xml
+Sitemap: https://jhodges3401-code.github.io/peelpixel/sitemap.xml
+Sitemap: https://jhodges3401-code.github.io/rate-calculator/sitemap.xml
