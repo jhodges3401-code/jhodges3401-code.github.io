@@ -7,3 +7,4 @@ Sitemap: https://orvianmarketplace.com/kudoshelf-demo/sitemap.xml
 Sitemap: https://orvianmarketplace.com/proposeroo/sitemap.xml
 Sitemap: https://orvianmarketplace.com/peelpixel/sitemap.xml
 Sitemap: https://orvianmarketplace.com/rate-calculator/sitemap.xml
+Sitemap: https://orvianmarketplace.com/software-guides/sitemap.xml
