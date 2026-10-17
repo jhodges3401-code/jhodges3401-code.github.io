@@ -1,0 +1,22 @@
+name: pages-https
+on:
+  workflow_dispatch:
+permissions:
+  pages: write
+  contents: read
+jobs:
+  https:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pages status
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api repos/${{ github.repository }}/pages | jq '{cname, status, build_type, https_enforced, https_certificate}' || true
+      - name: Enforce HTTPS
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api -X PUT repos/${{ github.repository }}/pages -f cname=orvianmarketplace.com -F https_enforced=true && echo PUT_OK || echo PUT_FAILED
+          sleep 5
+          gh api repos/${{ github.repository }}/pages | jq '{cname, https_enforced, https_certificate}' || true
