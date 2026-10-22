@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F3QH6E9QR7"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F3QH6E9QR7');
+<!-- GA4 loads only after consent: /assets/consent.js -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){var t=arguments[0];if(t==='event'&&!window.__omConsent)return;dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});gtag('js',new Date());gtag('config','G-F3QH6E9QR7');
 document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="gumroad.com"]'):null;if(!a)return;var m=a.href.match(/\/l\/([^\/?#]+)/),s=m?m[1]:'';var N={"answerloft":"Answerloft","bcmhvk":"Okayline","bjkyj":"Thumbtally","ekunvc":"Proposeroo Team","ijsmuq":"PeelPixel Pro","kzjcwp":"Proposeroo Pro","lyrgdx":"Rate Calculator Spreadsheet","pckinc":"Rate-Raise Email Rewrite","kudoshelf":"Kudoshelf","proposeroo-desk":"Proposeroo Desk","proposeroo-desk-team":"Proposeroo Desk Team","ctitql":"Freelance Rate Pack","jtocar":"Client OS","vwxgu":"Prompt Pack","oellyq":"Budget Template","bffum":"Rate Mini (free)","mceana":"Freelancer Toolkit Bundle","nqpwfg":"Raise Emails (free)"};gtag('event','buy_click',{product_name:a.getAttribute('data-product')||N[s]||s||'gumroad',product_slug:s,link_url:a.href,link_text:(a.textContent||'').trim().slice(0,80),transport_type:'beacon'});},true);</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Privacy note · Orvian Market</title>
@@ -26,7 +26,7 @@ h1{font-size:2rem;line-height:1.2;margin:.2em 0 .4em}h2{font-size:1.15rem;margin
 <header><div class="w"><a class="brand" href="/"><span class="mk" aria-hidden="true">O</span>Orvian Market</a></div></header>
 <main>
 <h1>Privacy note</h1>
-<p class="upd">Last updated October 17, 2026. Applies to all pages on orvianmarketplace.com, including the product demos and the software guides.</p>
+<p class="upd">Last updated October 22, 2026. Applies to all pages on orvianmarketplace.com, including the product demos and the software guides.</p>
 <h2>What we measure</h2>
 <p>We use <b>Google Analytics 4</b> to count page views and to see which products people click to buy. When you click a buy link that goes to Gumroad, we record a <code>buy_click</code> event with the product name and the link. Google Analytics sets first-party cookies and receives standard browser data (pages viewed, referrer, approximate location from your IP, device and browser type). We don't send your name, email or anything you type into our tools.</p>
 <h2>What we don't collect</h2>
@@ -38,11 +38,13 @@ h1{font-size:2rem;line-height:1.2;margin:.2em 0 .4em}h2{font-size:1.15rem;margin
 </ul>
 <h2>Purchases</h2>
 <p>Checkout happens on Gumroad, which has its own <a href="https://gumroad.com/privacy" rel="noopener">privacy policy</a>. We receive the order details Gumroad shares with sellers so we can deliver your product and handle refunds.</p>
-<h2>Opting out</h2>
-<p>You can block Google Analytics with the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics opt-out add-on</a>, a content blocker, or your browser's tracking protection. Our pages work the same either way. See <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">how Google uses data from sites that use its services</a>.</p>
+<h2>Your choice</h2>
+<p>Google Analytics only loads, and its cookies are only set, after you click Accept on our cookie banner. If you click Reject, or ignore the banner, no analytics script loads and no analytics cookies are set. Your choice is saved in your browser's local storage, and you can change it any time with the <button type="button" class="om-cs" onclick="window.omConsentSettings&&omConsentSettings()">Cookie settings</button> link in the footer of every page. Ad storage is always denied; we don't run ads.</p>
+<p>You can also block Google Analytics with the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics opt-out add-on</a>, a content blocker, or your browser's tracking protection. Our pages work the same either way. See <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">how Google uses data from sites that use its services</a>.</p>
 <h2>Questions</h2>
 <p>Reply to any Gumroad receipt or open an issue on <a href="https://github.com/jhodges3401-code">GitHub</a>.</p>
 </main>
 <footer><a href="/">Orvian Market</a> · Independent, pay-once software for freelancers and small teams.</footer>
+<script src="/assets/consent.js" defer></script>
 </body>
 </html>

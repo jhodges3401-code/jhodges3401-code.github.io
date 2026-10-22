@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F3QH6E9QR7"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F3QH6E9QR7');
+<!-- GA4 loads only after consent: /assets/consent.js -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){var t=arguments[0];if(t==='event'&&!window.__omConsent)return;dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});gtag('js',new Date());gtag('config','G-F3QH6E9QR7');
 document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="gumroad.com"]'):null;if(!a)return;var m=a.href.match(/\/l\/([^\/?#]+)/),s=m?m[1]:'';var N={"answerloft":"Answerloft","bcmhvk":"Okayline","bjkyj":"Thumbtally","ekunvc":"Proposeroo Team","ijsmuq":"PeelPixel Pro","kzjcwp":"Proposeroo Pro","lyrgdx":"Rate Calculator Spreadsheet","pckinc":"Rate-Raise Email Rewrite","kudoshelf":"Kudoshelf","proposeroo-desk":"Proposeroo Desk","proposeroo-desk-team":"Proposeroo Desk Team","ctitql":"Freelance Rate Pack","jtocar":"Client OS","vwxgu":"Prompt Pack","oellyq":"Budget Template","bffum":"Rate Mini (free)","mceana":"Freelancer Toolkit Bundle","nqpwfg":"Raise Emails (free)"};gtag('event','buy_click',{product_name:a.getAttribute('data-product')||N[s]||s||'gumroad',product_slug:s,link_url:a.href,link_text:(a.textContent||'').trim().slice(0,80),transport_type:'beacon'});},true);</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="3r78I2ireRYhS0XFV-zbVQ4cbv9MH5PoMKcFy97K3mk" />
@@ -215,4 +215,5 @@ footer .brand{color:#fff;margin-bottom:12px}.legal{border-top:1px solid #1f2a3c;
 <script>
 document.querySelectorAll('.filters button').forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.f;document.querySelectorAll('.filters button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});document.querySelectorAll('.pc').forEach(function(c){c.hidden=!(f==='all'||c.dataset.c.split(' ').indexOf(f)>-1)})})});
 </script>
-<script>document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[data-out]'):null;if(!a||typeof gtag!='function')return;gtag('event','outbound_store_click',{store:a.getAttribute('data-out'),placement:a.getAttribute('data-placement'),link_url:a.href,transport_type:'beacon'});},true);</script></body></html>
+<script>document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[data-out]'):null;if(!a||typeof gtag!='function')return;gtag('event','outbound_store_click',{store:a.getAttribute('data-out'),placement:a.getAttribute('data-placement'),link_url:a.href,transport_type:'beacon'});},true);</script><script src="/assets/consent.js" defer></script>
+</body></html>
