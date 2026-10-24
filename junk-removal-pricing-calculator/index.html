@@ -37,7 +37,7 @@ a:focus-visible,summary:focus-visible{outline:3px solid #14b8a6;outline-offset:3
 .crumb{font-size:14px;color:var(--mute);margin:0 0 14px}.crumb a{color:var(--mute)}
 .hero{padding:48px 0 56px;background:radial-gradient(800px 380px at 90% -10%,#e0f2fe 0,transparent 60%),linear-gradient(#fff,var(--bg));border-bottom:1px solid var(--line)}
 .hero .w{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-h1{font-size:clamp(34px,4.8vw,52px);line-height:1.06;letter-spacing:-.035em;font-weight:800;margin:0 0 16px}
+h1,h2{text-wrap:balance}h1{font-size:clamp(34px,4.8vw,52px);line-height:1.06;letter-spacing:-.035em;font-weight:800;margin:0 0 16px}
 .lead{font-size:clamp(17px,1.6vw,19px);color:var(--mute);margin:0 0 22px}
 .price{display:flex;align-items:baseline;gap:10px;margin:0 0 18px}.price b{font-size:34px;letter-spacing:-.02em}.price span{color:var(--mute)}
 .ctas{display:flex;flex-wrap:wrap;gap:12px}
@@ -77,7 +77,7 @@ footer{background:#0b1220;color:#9aa6b8;font-size:14px;padding:36px 0}footer a{c
 <p class="crumb"><a href="/">Orvian Market</a> › Junk removal</p>
 <h1>Junk Removal Pricing Calculator</h1>
 <p class="lead">Price every job from the load size, your dump fee, the miles, your crew and the special items. The sheet shows the lowest price that still hits your margin, before you quote it over the phone.</p>
-<p class="price"><b>$19</b><span>one-time · Excel and Google Sheets</span></p>
+<p class="price"><b>$19</b><span>one-time · Excel and Google&nbsp;Sheets</span></p>
 <div class="ctas"><a class="btn pri" data-product="Junk Removal Pricing Calculator" href="https://jhodges6.gumroad.com/l/junk-removal-calculator?utm_source=orvianmarketplace&utm_medium=site&utm_campaign=junk-landing&utm_content=hero">Buy for $19 on Gumroad</a><a class="btn sec" href="#example">See a worked example</a></div>
 <ul class="ck">
 <li>Instant download: blank file, filled-in example file and a 2-page Start Here PDF</li>
@@ -122,7 +122,7 @@ footer{background:#0b1220;color:#9aa6b8;font-size:14px;padding:36px 0}footer a{c
 
 <section class="alt" id="log"><div class="w">
 <p class="kick">The job that lost money</p>
-<h2>A phone quote that felt fair, and a job that cost more than it paid</h2>
+<h2>A phone quote that felt fair, and a job that cost more than it&nbsp;paid</h2>
 <p class="sub">From the example Job Log (made-up jobs). Job 3 was a three-quarter truck quoted at $350 over the phone. It turned into a far haul with a crew of three, and the log shows what it really cost.</p>
 <div class="two">
 <div class="tw"><table>
@@ -136,7 +136,7 @@ footer{background:#0b1220;color:#9aa6b8;font-size:14px;padding:36px 0}footer a{c
 <tr class="neg"><td>Profit</td><td class="n">−$71.29</td></tr>
 </tbody></table>
 <p class="note">Made-up example. Across the 24 example jobs, the Dashboard counts 4 under the target margin and 1 that lost money, so you see which kind of job to price differently next time.</p></div>
-<img class="shot" src="/assets/junk-chart.svg" width="1200" height="900" loading="lazy" alt="Customer price chart by load size next to a printable one-page quote, example data">
+<figure style="margin:0"><img class="shot" src="/assets/junk-chart.svg" width="1200" height="900" loading="lazy" alt="Customer price chart by load size next to a printable one-page quote, example data"><figcaption class="note">The fix for a job like Job 3: price it from the sheet instead of over the phone. The same file prints this price chart by load size and a one-page quote (example data).</figcaption></figure>
 </div>
 </div></section>
 

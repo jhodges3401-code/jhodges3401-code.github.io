@@ -20,7 +20,7 @@ var css='#om-cb{position:fixed;left:16px;right:16px;bottom:16px;z-index:21474830
 '#om-cb button{flex:1 1 120px;min-height:44px;border-radius:10px;font:600 15px/1 inherit;font-family:inherit;cursor:pointer;border:2px solid #f1f5f9}'+
 '#om-cb .om-a{background:#f1f5f9;color:#0b1220}#om-cb .om-r{background:transparent;color:#f1f5f9}'+
 '#om-cb button:focus-visible{outline:3px solid #5eead4;outline-offset:2px}'+
-'.om-cs{background:none;border:0;padding:0;color:inherit;text-decoration:underline;cursor:pointer;font:inherit}';
+'.om-cs{background:none;border:0;padding:6px 0;min-height:32px;color:inherit;text-decoration:underline;cursor:pointer;font:inherit}';
 function banner(){
   if(d.getElementById('om-cb'))return;
   if(!d.getElementById('om-cs-css')){var st=d.createElement('style');st.id='om-cs-css';st.textContent=css;d.head.appendChild(st);}
@@ -38,7 +38,7 @@ function footerLink(){
   if(!d.getElementById('om-cs-css')){var st=d.createElement('style');st.id='om-cs-css';st.textContent=css;d.head.appendChild(st);}
   var p=d.createElement('p');p.style.margin='8px 0 0';
   var btn=d.createElement('button');btn.type='button';btn.id='om-cs-link';btn.className='om-cs';btn.textContent='Cookie settings';btn.onclick=banner;
-  p.appendChild(btn);f.appendChild(p);
+  p.appendChild(btn);(f.querySelector('.w,.wrap,.container')||f).appendChild(p);if(!f.querySelector('.w,.wrap,.container')){p.style.padding='0 16px';}
 }
 function init(){footerLink();var c=get();if(c==='granted')loadGA();else if(c!=='denied')banner();}
 if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',init);else init();
