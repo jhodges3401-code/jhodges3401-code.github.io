@@ -72,7 +72,7 @@ footer{background:#0b1220;color:#9aa6b8;font-size:14px;padding:36px 0}footer a{c
 .fm label{display:block;font-size:14px;font-weight:600;color:var(--ink2);margin:0 0 12px}
 .fm input[type=number]{display:block;width:100%;margin-top:5px;padding:10px 12px;font:inherit;font-size:16px;border:1px solid #cfd6e1;border-radius:9px;background:#fffbea}
 .fm input:focus{outline:3px solid #14b8a6;outline-offset:1px}
-.fm .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}.fm .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fm .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}.fm .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.fm .row2,.fm .row3{align-items:end}
 .fm .cb{display:flex;gap:8px;align-items:center;font-weight:600}.fm .cb input{width:18px;height:18px}
 .res .big{margin-top:16px}#sc-err{color:#b45309;font-weight:600;margin:0 0 10px;min-height:0}
 @media (max-width:860px){.tool{grid-template-columns:1fr}}
@@ -170,7 +170,7 @@ footer{background:#0b1220;color:#9aa6b8;font-size:14px;padding:36px 0}footer a{c
 <div class="row3" id="sc-cardf">
 <label>Card fee %<input type="number" id="sc-pct" min="0" step="0.01" value="2.9" inputmode="decimal"></label>
 <label>Fixed fee ($)<input type="number" id="sc-fix" min="0" step="0.01" value="0.30" inputmode="decimal"></label>
-<label>Contract payments<input type="number" id="sc-pay" min="1" step="1" value="4" inputmode="numeric"></label>
+<label>Payments<input type="number" id="sc-pay" min="1" step="1" value="4" inputmode="numeric"></label>
 </div>
 </form>
 <div class="res" aria-live="polite">
