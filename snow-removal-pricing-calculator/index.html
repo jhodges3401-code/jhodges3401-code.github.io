@@ -67,6 +67,16 @@ details p{margin:10px 0 0;color:var(--mute);font-size:16px}
 footer{background:#0b1220;color:#9aa6b8;font-size:14px;padding:36px 0}footer a{color:#c7d2e0}
 @media (max-width:860px){.hero .w,.two,.cards{grid-template-columns:1fr}.tabs{grid-template-columns:1fr 1fr}.nav .hide{display:none}}
 @media (max-width:520px){.tabs{grid-template-columns:1fr}.btn{width:100%}.nav .btn{width:auto}th,td{padding:9px 7px;font-size:13.5px}thead th{font-size:11px;letter-spacing:.02em}}
+.tool{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px;align-items:start}
+.fm{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px 22px 14px;box-shadow:var(--sh)}
+.fm label{display:block;font-size:14px;font-weight:600;color:var(--ink2);margin:0 0 12px}
+.fm input[type=number]{display:block;width:100%;margin-top:5px;padding:10px 12px;font:inherit;font-size:16px;border:1px solid #cfd6e1;border-radius:9px;background:#fffbea}
+.fm input:focus{outline:3px solid #14b8a6;outline-offset:1px}
+.fm .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}.fm .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fm .cb{display:flex;gap:8px;align-items:center;font-weight:600}.fm .cb input{width:18px;height:18px}
+.res .big{margin-top:16px}#sc-err{color:#b45309;font-weight:600;margin:0 0 10px;min-height:0}
+@media (max-width:860px){.tool{grid-template-columns:1fr}}
+@media (max-width:520px){.fm .row3{grid-template-columns:1fr 1fr 1fr;gap:6px}.fm .row2{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -79,6 +89,7 @@ footer{background:#0b1220;color:#9aa6b8;font-size:14px;padding:36px 0}footer a{c
 <p class="lead">Price every push from your own equipment, labor, fuel and de-icer costs. Then see whether a seasonal contract or per-push billing pays you more, before you sign anyone for the winter.</p>
 <p class="price"><b>$17</b><span>one-time · Excel and Google Sheets</span></p>
 <div class="ctas"><a class="btn pri" data-product="Snow Removal Pricing Calculator" href="https://jhodges6.gumroad.com/l/snow-removal-calculator?utm_source=orvianmarketplace&utm_medium=site&utm_campaign=snow-landing&utm_content=hero">Buy for $17 on Gumroad</a><a class="btn sec" href="#example">See a worked example</a></div>
+<p style="margin:14px 0 0;font-size:15px"><a href="#check">Or run the free contract vs per-push check first</a></p>
 <ul class="ck">
 <li>Instant download: blank file, filled-in example file and a 2-page Start Here PDF</li>
 <li>Excel 2016 or newer and Google Sheets. No macros, no app, no login</li>
@@ -130,10 +141,70 @@ footer{background:#0b1220;color:#9aa6b8;font-size:14px;padding:36px 0}footer a{c
 <tr><td>Normal</td><td class="n">12</td><td class="n">$297.83</td><td class="n">$324.50</td><td>Contract</td></tr>
 <tr class="neg"><td>High</td><td class="n">20</td><td class="n">$513.05</td><td class="n">−$40.48</td><td>Per push</td></tr>
 </tbody></table>
-<p class="note">Made-up example. Both options earn the same at about 12.4 events. Above that, per push earns more unless you cap the events the contract covers (the sheet lets you).</p></div>
+<p class="note">Made-up example. Both options earn the same at about 12.4 events. Above that, per push earns more unless you cap the events the contract covers (the sheet lets you). <a href="#check">Try it with your numbers</a>.</p></div>
 <img class="shot" src="/assets/snow-compare.svg" width="1200" height="900" loading="lazy" alt="Season Compare table: seasonal contract versus per-push profit for low, normal and high snow event counts typed by the user, example data">
 </div>
 </div></section>
+
+<section id="check"><div class="w">
+<p class="kick">Free check, no download</p>
+<h2>Seasonal contract or per push? Check it with your numbers</h2>
+<p class="sub">Type your price per push, what a push costs you and the contract price you have in mind. It shows what each option earns in a low, normal and high winter, and the event count where they earn the same. It runs in your browser; nothing is stored or sent.</p>
+<div class="tool">
+<form class="fm" id="sc" onsubmit="return false" autocomplete="off">
+<div class="row2">
+<label>Price per push ($)<input type="number" id="sc-price" min="0" step="0.01" value="75" inputmode="decimal"></label>
+<label>Your cost per push ($)<input type="number" id="sc-cost" min="0" step="0.01" value="45.62" inputmode="decimal"></label>
+</div>
+<div class="row2">
+<label>Seasonal contract price ($)<input type="number" id="sc-contract" min="0" step="0.01" value="925" inputmode="decimal"></label>
+<label>Season costs, this client ($)<input type="number" id="sc-season" min="0" step="0.01" value="25" inputmode="decimal"></label>
+</div>
+<p style="font-size:14px;font-weight:600;color:var(--ink2);margin:0 0 6px">Snow events per season (your own counts)</p>
+<div class="row3">
+<label>Low<input type="number" id="sc-low" min="0" step="1" value="6" inputmode="numeric"></label>
+<label>Normal<input type="number" id="sc-norm" min="0" step="1" value="12" inputmode="numeric"></label>
+<label>High<input type="number" id="sc-high" min="0" step="1" value="20" inputmode="numeric"></label>
+</div>
+<label class="cb"><input type="checkbox" id="sc-card" checked> Customers pay by card</label>
+<div class="row3" id="sc-cardf">
+<label>Card fee %<input type="number" id="sc-pct" min="0" step="0.01" value="2.9" inputmode="decimal"></label>
+<label>Fixed fee ($)<input type="number" id="sc-fix" min="0" step="0.01" value="0.30" inputmode="decimal"></label>
+<label>Contract payments<input type="number" id="sc-pay" min="1" step="1" value="4" inputmode="numeric"></label>
+</div>
+</form>
+<div class="res" aria-live="polite">
+<p id="sc-err"></p>
+<div class="tw"><table>
+<thead><tr><th>Season</th><th class="n">Events</th><th class="n">Per-push profit</th><th class="n">Contract profit</th><th>Better</th></tr></thead>
+<tbody id="sc-body"><tr><td colspan="5">Type your numbers to see the result.</td></tr></tbody></table></div>
+<div class="big"><p id="sc-be"><b style="font-size:24px;display:block;line-height:1.15;margin-bottom:6px">&nbsp;</b>&nbsp;</p></div>
+<p class="note">Defaults are the made-up example above (cost rounded to the cent, so results can differ by a few cents). If your own pay isn't in your cost per push, the profit shown includes it. No weather forecast is made: the event counts are yours. Not legal or financial advice; put contract terms in writing.</p>
+<p style="margin:18px 0 8px;color:var(--ink2)">This check takes one cost per push from you. The $17 spreadsheet works that cost out from your equipment, fuel, de-icer, labor and overhead, sets a price floor and a suggested contract price, caps the events a contract covers, and logs every storm into a season P&L.</p>
+<a class="btn pri" data-product="Snow Removal Pricing Calculator" href="https://jhodges6.gumroad.com/l/snow-removal-calculator?utm_source=orvianmarketplace&utm_medium=site&utm_campaign=snow-landing&utm_content=tool">Get the full calculator for $17</a>
+</div>
+</div>
+</div></section>
+<script>
+(function(){var $=function(i){return document.getElementById(i)},used=false;
+function m(x){var a=Math.abs(x),t=a.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});return (x<-0.004?'\u2212$':'$')+t}
+function v(i){var e=$(i);return e.value===''?NaN:Number(e.value)}
+function run(){var P=v('sc-price'),C=v('sc-cost'),K=v('sc-contract'),S=v('sc-season'),card=$('sc-card').checked,pc=v('sc-pct')/100,fx=v('sc-fix'),np=v('sc-pay'),E=[['Low',v('sc-low')],['Normal',v('sc-norm')],['High',v('sc-high')]];
+$('sc-cardf').style.display=card?'':'none';if(!card){pc=0;fx=0;np=0}
+var err='';[P,C,K,S].forEach(function(x){if(!(x>=0))err='Type a number of 0 or more in every box.'});
+E.forEach(function(e){if(!(e[1]>=0)||e[1]!==Math.floor(e[1]))err='Event counts must be whole numbers, 0 or more.'});
+if(card&&(!(pc>=0)||!(fx>=0)||!(np>=1)||np!==Math.floor(np)))err='Check the card fee boxes (payments must be a whole number, 1 or more).';
+$('sc-err').textContent=err;if(err)return;
+var cp=P*pc+fx,cf=K*pc+fx*np,rows='';
+E.forEach(function(e){var n=e[1],pp=n*(P-C-cp)-S,ct=K-n*C-S-cf,d=ct-pp,b=Math.abs(d)<0.005?'Same':(d>0?'Contract':'Per push');
+rows+='<tr'+(ct<-0.004?' class="neg"':'')+'><td>'+e[0]+'</td><td class="n">'+n+'</td><td class="n">'+m(pp)+'</td><td class="n">'+m(ct)+'</td><td>'+b+'</td></tr>'});
+$('sc-body').innerHTML=rows;
+var net=P-cp,be=$('sc-be');
+if(net>0){var x=(K-cf)/net;be.innerHTML='<b style="font-size:24px;display:block;line-height:1.15;margin-bottom:6px">Same either way at about '+(Math.round(x*10)/10).toLocaleString('en-US')+' events</b>Fewer events than that and the contract earns more. More, and per push earns more, so a heavy winter is the risk you carry on a contract.'}
+else be.innerHTML='<b style="font-size:24px;display:block;line-height:1.15;margin-bottom:6px">Your per-push price doesn\u2019t cover the card fee</b>Raise the price per push.';
+if(!used&&window.__scReady){used=true;if(window.gtag)gtag('event','tool_use',{tool_name:'snow_contract_check'})}}
+$('sc').addEventListener('input',run);run();window.__scReady=true;})();
+</script>
 
 <section id="inside"><div class="w">
 <p class="kick">What's inside</p>
