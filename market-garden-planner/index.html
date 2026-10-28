@@ -19,6 +19,7 @@ document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='800' font-size='34' fill='white' text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Product", "name": "Market Garden Crop Planner and Succession Planting Spreadsheet", "description": "Excel and Google Sheets planner for market gardeners, CSA growers and small farms: succession plantings with tray-sowing, plant-out and harvest dates, frost and bed-overlap warnings, a 40-bed by 40-week bed plan, a seed order with packets and cost, and a weekly harvest and CSA value forecast. Blank file with 34 starter crops, a filled-in example file and a Start Here PDF.", "image": ["https://public-files.gumroad.com/t30wjq896bibza7apkold7c4unna"], "brand": {"@type": "Brand", "name": "Orvian Market"}, "url": "https://orvianmarketplace.com/market-garden-planner/", "offers": {"@type": "Offer", "price": "19.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://jhodges6.gumroad.com/l/market-garden-planner", "seller": {"@type": "Organization", "name": "Orvian Market"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Orvian Market", "item": "https://orvianmarketplace.com/"}, {"@type": "ListItem", "position": 2, "name": "Market Garden Crop Planner", "item": "https://orvianmarketplace.com/market-garden-planner/"}]}]</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does it work in Google Sheets?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It's a regular .xlsx file with standard formulas and no macros. Open it in Excel 2016 or newer, or in Google Sheets use File → Import → Upload."}}, {"@type": "Question", "name": "My frost dates are different. What changes?", "acceptedAnswer": {"@type": "Answer", "text": "Type your two frost dates on Farm Settings. Each crop's safe plant-out date and the frost warnings update right away, so you can see which first dates to move. Planting dates don't move by themselves: change a crop's first date on the Succession Planner and all its later successions move with it."}}, {"@type": "Question", "name": "Can I add crops that aren't in the starter list?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. There are 26 empty Crop Library rows; fill in the numbers from your seed packet or catalog and the crop shows up in the Succession Planner."}}, {"@type": "Question", "name": "Are the starter numbers right for my farm?", "acceptedAnswer": {"@type": "Answer", "text": "They're averages from extension guides and a seed company chart, for other regions and varieties, and rows per bed and harvest weeks are our own estimates for a 30-inch bed. Treat them as a starting point and change any number that doesn't match your seed packets or your own records."}}, {"@type": "Question", "name": "How big a farm does it handle?", "acceptedAnswer": {"@type": "Answer", "text": "Up to 40 beds, 40 crop plans and 300 plantings over a 40-week window. Every bed is treated as the same length, which you set on Farm Settings."}}, {"@type": "Question", "name": "How do I plan my last succession before first frost?", "acceptedAnswer": {"@type": "Answer", "text": "Work back from your first fall frost date. In this planner a tender crop's harvest has to end by that date, so its latest plant-out is the frost date minus days to maturity minus the harvest window; hardy crops only need their harvest to start by it. On the made-up example farm (first frost Oct 5) that puts the last bush-bean sowing at Jul 22 and the last cucumber at Jun 25. Fall growth is slower, so leave a margin: Johnny's free fall-harvest calculator adds about 2 weeks."}}, {"@type": "Question", "name": "Should I type the 50% or the 10% frost date?", "acceptedAnswer": {"@type": "Answer", "text": "The 50% date is the median, so in half of years frost comes later in spring or earlier in fall. For a more cautious plan, use the 10% spring date (later) and the 10% fall date (earlier) from NOAA's frost and freeze tables for a station near you; the planner's safe dates and warnings tighten to match."}}, {"@type": "Question", "name": "How much seed do I need for a 100-foot bed?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on rows, spacing, germination and your allowances. In the example file, head lettuce in 4 rows at 6 inches needs about 1,222 seeds for a 100 ft bed after 10% overplant, 80% germination and 10% tray loss, and carrots in 4 rows need 1.1 oz. The Seed Order tab adds up every planting and rounds to whole packets."}}, {"@type": "Question", "name": "Do weeks in the tray count against the bed?", "acceptedAnswer": {"@type": "Answer", "text": "No. A transplant's bed is booked from plant-out until harvest ends plus your turnaround days, so tray weeks don't block a bed. In the example, a head lettuce planting holds its bed for 89 days: 68 days to maturity, 2 weeks of harvest and 7 days to turn the bed around."}}, {"@type": "Question", "name": "Is it a subscription?", "acceptedAnswer": {"@type": "Answer", "text": "No. It's $19 once and the files are yours to keep and copy for next season. There's no account, no app and nothing to renew."}}, {"@type": "Question", "name": "How do I get the files, and what if it's not right for me?", "acceptedAnswer": {"@type": "Answer", "text": "Checkout is on Gumroad and the download link arrives right away by email. If a file won't open or isn't what you expected, reply to your Gumroad receipt within 14 days and we'll fix it or refund you."}}]}</script>
 <style>
 :root{--ink:#0b1220;--ink2:#1e293b;--mute:#526077;--line:#e5e9f0;--bg:#f7f8fa;--acc:#0f766e;--acc-d:#0b5d57;--acc-l:#ccfbf1;--r:16px;--sh:0 1px 2px rgba(11,18,32,.06),0 12px 32px -16px rgba(11,18,32,.22)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
@@ -69,6 +70,7 @@ footer{background:#0b1220;color:#9aa6b8;font-size:14px;padding:36px 0}footer a{c
 @media (max-width:520px){.tabs{grid-template-columns:1fr}.btn{width:100%}.nav .btn{width:auto}th,td{padding:9px 7px;font-size:13.5px}thead th{font-size:11px;letter-spacing:.02em}}
 p,li{text-wrap:pretty}
 @media (max-width:520px){td.nw{white-space:normal}.tw th,.tw td{padding:9px 6px}}
+@media (max-width:520px){.hm{display:none}#succession-math td.n{white-space:nowrap}}
 </style>
 </head>
 <body>
@@ -163,6 +165,92 @@ p,li{text-wrap:pretty}
 </tbody></table></div>
 </div></section>
 
+<section class="alt" id="frost-dates"><div class="w">
+<p class="kick">Frost dates, explained</p>
+<h2>Your frost date is a probability, not a calendar date</h2>
+<p class="sub">The two dates on Farm Settings drive every safe plant-out date and every frost warning in the file, so it helps to know where frost dates come from and which one to type.</p>
+<div class="two">
+<div>
+<h3 style="margin:0 0 8px;font-size:19px">Where the dates come from</h3>
+<p style="margin:0 0 12px;color:var(--ink2)">In the US, frost dates come from NOAA's National Centers for Environmental Information (NCEI). Its 1991–2020 U.S. Climate Normals, the current set, include frost and freeze dates by weather station. For each station the tables give the last spring date and the first fall date for several temperatures, including 36°F (frost), 32°F (freeze) and 28°F (hard freeze), each at probability levels from 10% to 90%.</p>
+<p style="margin:0 0 12px;color:var(--ink2)">NC State Extension's guide to reading those tables uses a Raleigh station (1981–2010 normals) as its example: a 90% chance of a 36°F frost on or after March 28, a 50% chance on or after April 12, and a 10% chance on or after April 26. In fall the order flips, and the 10% date is the early one: a 10% chance the first freeze comes on or before it.</p>
+<h3 style="margin:22px 0 8px;font-size:19px">Which date to type</h3>
+<ul class="ck" style="margin-top:0">
+<li>The 50% date is the median: in half of years the last spring frost comes later than it, and in half the first fall frost comes earlier</li>
+<li>For a more cautious plan, use the 10% dates in both seasons. The spring one is later and the fall one earlier, so the file's safe dates and warnings get stricter</li>
+<li>Frost can form when the air is above freezing, which is why the tables have a 36°F row next to 32°F. For tender crops in a low, cold spot, the 36°F dates are the safer pick</li>
+</ul>
+</div>
+<div>
+<h3 style="margin:0 0 8px;font-size:19px">What the planner does with them</h3>
+<div class="tw"><table><caption class="note" style="caption-side:bottom;text-align:left;padding:8px 16px">Example data: dates for the made-up farm's last spring frost of May&nbsp;10.</caption>
+<thead><tr><th>Frost class</th><th>Safe plant-out</th><th>Example</th></tr></thead><tbody>
+<tr><td>Hardy</td><td>5 weeks before last frost</td><td class="nw">Apr&nbsp;5</td></tr>
+<tr><td>Semi-hardy</td><td>3 weeks before</td><td class="nw">Apr&nbsp;19</td></tr>
+<tr><td>Tender</td><td>On last frost</td><td class="nw">May&nbsp;10</td></tr>
+<tr><td>Very tender</td><td>2 weeks after</td><td class="nw">May&nbsp;24</td></tr>
+</tbody></table></div>
+<p style="margin:14px 0 0;color:var(--ink2)">The week offsets are midpoints of the ranges in Purdue Extension's HO-186 planting calendar. In fall, tender and very tender plantings get a warning when their harvest runs past your first fall frost date, and any planting gets one if its harvest would only start after it. The file doesn't look up frost dates for you: you type the two dates you trust.</p>
+<p class="note">Sources: <a href="https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals" rel="noopener">NCEI U.S. Climate Normals</a> · <a href="https://content.ces.ncsu.edu/interpreting-freezefrost-probabilities-from-the-national-centers-for-environmental-information" rel="noopener">NC State Extension, Interpreting Freeze / Frost Probabilities</a> · Purdue Extension HO-186. Checked Oct 28, 2026.</p>
+</div>
+</div>
+</div></section>
+
+<section id="succession-math"><div class="w">
+<p class="kick">Succession math (made-up example numbers)</p>
+<h2>Three succession-planting questions, answered from the example file</h2>
+<p class="sub">Every number here is read from the example file's own cells and checked by a script: a made-up 24-bed farm with 100&nbsp;ft beds, last spring frost May&nbsp;10, first fall frost Oct&nbsp;5, 10% overplant and 10% tray loss. Your crops, dates and seed will differ.</p>
+
+<h3 id="last-planting" style="margin:8px 0 8px;font-size:21px">1. How late can each succession go in before first frost?</h3>
+<p style="margin:0 0 16px;color:var(--ink2);max-width:760px">Count back from your first fall frost date. In this planner, a tender or very tender crop's harvest has to end by that date, so its latest plant-out is the frost date minus days to maturity minus the harvest window. A hardy or semi-hardy crop only needs its harvest to start by then, so it's the frost date minus days to maturity.</p>
+<div class="tw"><table><caption class="note" style="caption-side:bottom;text-align:left;padding:8px 16px">Example data only. Latest plant-out with no frost warning when first fall frost is Oct&nbsp;5. Only the second cucumber (Jul&nbsp;19) misses it, and it's the one warning on the example farm.</caption>
+<thead><tr><th>Crop</th><th>Frost class</th><th>Latest plant-out</th><th>Example's last</th></tr></thead><tbody>
+<tr><td>Lettuce (head)</td><td>Semi-hardy</td><td class="nw">Jul&nbsp;29</td><td class="nw">Jul&nbsp;26 ✓</td></tr>
+<tr><td>Radish</td><td>Hardy</td><td class="nw">Sep&nbsp;5</td><td class="nw">May&nbsp;24 ✓</td></tr>
+<tr><td>Spinach</td><td>Hardy</td><td class="nw">Aug&nbsp;21</td><td class="nw">Apr&nbsp;26 ✓</td></tr>
+<tr><td>Carrot</td><td>Semi-hardy</td><td class="nw">Jul&nbsp;19</td><td class="nw">May&nbsp;31 ✓</td></tr>
+<tr><td>Beet</td><td>Semi-hardy</td><td class="nw">Aug&nbsp;6</td><td class="nw">May&nbsp;24 ✓</td></tr>
+<tr><td>Kale</td><td>Hardy</td><td class="nw">Aug&nbsp;8</td><td class="nw">Apr&nbsp;12 ✓</td></tr>
+<tr><td>Broccoli</td><td>Hardy</td><td class="nw">Jul&nbsp;22</td><td class="nw">May&nbsp;24 ✓</td></tr>
+<tr><td>Bush bean</td><td>Tender</td><td class="nw">Jul&nbsp;22</td><td class="nw">Jul&nbsp;19 ✓</td></tr>
+<tr><td>Tomato (staked)</td><td>Tender</td><td class="nw">May&nbsp;19</td><td class="nw">May&nbsp;17 ✓</td></tr>
+<tr class="neg"><td>Cucumber</td><td>Very tender</td><td class="nw">Jun&nbsp;25</td><td class="nw">Jul&nbsp;19 ⚠</td></tr>
+<tr><td>Pepper</td><td>Very tender</td><td class="nw">May&nbsp;28</td><td class="nw">May&nbsp;24 ✓</td></tr>
+</tbody></table></div>
+<p class="note" style="max-width:760px">Fall growth is slower. Johnny's Selected Seeds' free fall-harvest calculator adds a "fall factor" of about 2 weeks for cooler, shorter days, and this planner doesn't, so for fall crops leave a margin before these dates.</p>
+
+<h3 id="harvest-weeks" style="margin:40px 0 8px;font-size:21px">2. How many weeks of harvest does a succession give?</h3>
+<p style="margin:0 0 16px;color:var(--ink2);max-width:760px">Each planting harvests for the crop's harvest weeks in the Crop Library. If plantings are no further apart than that window, the harvest runs without a break; if they're further apart, you get a hole. On the example farm, 8 lettuce plantings 14 days apart, each picked for 2 weeks, cover 16 weeks with no gap. Radish, sown every 21 days with a 2-week window, has a 7-day hole between each sowing.</p>
+<div class="tw"><table><caption class="note" style="caption-side:bottom;text-align:left;padding:8px 16px">Example data only. Harvest weeks per planting are our own estimates in the starter library; change them to match your records.</caption>
+<thead><tr><th>Crop</th><th>Plantings</th><th class="n hm">Picked for</th><th>Harvest season</th><th>Gaps</th></tr></thead><tbody>
+<tr><td>Lettuce (head)</td><td class="nw">8 every 14&nbsp;days</td><td class="n hm">2&nbsp;wk</td><td class="nw">Jun&nbsp;26 to Oct&nbsp;15</td><td>none</td></tr>
+<tr class="neg"><td>Radish</td><td class="nw">3 every 21&nbsp;days</td><td class="n hm">2&nbsp;wk</td><td class="nw">May&nbsp;12 to Jul&nbsp;6</td><td>2 × 7 days</td></tr>
+<tr><td>Spinach</td><td class="nw">2 every 21&nbsp;days</td><td class="n hm">3&nbsp;wk</td><td class="nw">May&nbsp;20 to Jun&nbsp;30</td><td>none</td></tr>
+<tr><td>Carrot</td><td class="nw">3 every 21&nbsp;days</td><td class="n hm">4&nbsp;wk</td><td class="nw">Jul&nbsp;6 to Sep&nbsp;13</td><td>none</td></tr>
+<tr class="neg"><td>Beet</td><td class="nw">2 every 28&nbsp;days</td><td class="n hm">3&nbsp;wk</td><td class="nw">Jun&nbsp;25 to Aug&nbsp;12</td><td>1 × 7 days</td></tr>
+<tr class="neg"><td>Broccoli</td><td class="nw">3 every 21&nbsp;days</td><td class="n hm">2&nbsp;wk</td><td class="nw">Jun&nbsp;26 to Aug&nbsp;20</td><td>2 × 7 days</td></tr>
+<tr><td>Bush bean</td><td class="nw">3 every 21&nbsp;days</td><td class="n hm">3&nbsp;wk</td><td class="nw">Aug&nbsp;1 to Oct&nbsp;2</td><td>none</td></tr>
+<tr><td>Cucumber</td><td class="nw">2 every 28&nbsp;days</td><td class="n hm">5&nbsp;wk</td><td class="nw">Aug&nbsp;28 to Oct&nbsp;29</td><td>none</td></tr>
+</tbody></table></div>
+
+<h3 id="seed-per-bed-foot" style="margin:40px 0 8px;font-size:21px">3. How much seed per bed-foot?</h3>
+<p style="margin:0 0 16px;color:var(--ink2);max-width:760px">For transplants: plants per bed-foot = rows × 12 ÷ in-row spacing in inches, and seeds = plants × (1 + overplant) ÷ germination ÷ (1 − tray loss). For direct-sown crops the file uses ounces: seed oz per 100&nbsp;ft of row × rows ÷ 100 × (1 + overplant). A bed is in use from plant-out until harvest ends plus 7 turnaround days; tray weeks happen off the bed.</p>
+<div class="tw"><table><caption class="note" style="caption-side:bottom;text-align:left;padding:8px 16px">Example data only, for a 30-inch bed with the example's allowances. Seed rates and germination are starter values from extension guides and federal minimums; your packet's numbers come first.</caption>
+<thead><tr><th>Crop</th><th class="hm">Rows × spacing</th><th class="n hm">Plants / ft</th><th class="n">Seed / bed-ft</th><th class="n">Per 100 ft bed</th><th class="n">Days in bed</th></tr></thead><tbody>
+<tr><td>Lettuce (head)</td><td class="nw hm">4 × 6&nbsp;in</td><td class="n hm">8</td><td class="n nw">12.2 seeds</td><td class="n nw">1,222 seeds</td><td class="n">89</td></tr>
+<tr><td>Radish</td><td class="nw hm">5 × 1&nbsp;in</td><td class="n hm">60</td><td class="n nw">0.055 oz</td><td class="n nw">5.5 oz</td><td class="n">51</td></tr>
+<tr><td>Spinach</td><td class="nw hm">5 × 3&nbsp;in</td><td class="n hm">20</td><td class="n nw">0.055 oz</td><td class="n nw">5.5 oz</td><td class="n">73</td></tr>
+<tr><td>Carrot</td><td class="nw hm">4 × 3&nbsp;in</td><td class="n hm">16</td><td class="n nw">0.011 oz</td><td class="n nw">1.1 oz</td><td class="n">113</td></tr>
+<tr><td>Beet</td><td class="nw hm">4 × 3&nbsp;in</td><td class="n hm">16</td><td class="n nw">0.088 oz</td><td class="n nw">8.8 oz</td><td class="n">88</td></tr>
+<tr><td>Kale</td><td class="nw hm">3 × 8&nbsp;in</td><td class="n hm">4.5</td><td class="n nw">7.3 seeds</td><td class="n nw">733 seeds</td><td class="n">135</td></tr>
+<tr><td>Broccoli</td><td class="nw hm">2 × 24&nbsp;in</td><td class="n hm">1</td><td class="n nw">1.6 seeds</td><td class="n nw">163 seeds</td><td class="n">96</td></tr>
+<tr><td>Bush bean</td><td class="nw hm">2 × 3&nbsp;in</td><td class="n hm">8</td><td class="n nw">0.352 oz</td><td class="n nw">35.2 oz</td><td class="n">83</td></tr>
+<tr><td>Tomato (staked)</td><td class="nw hm">1 × 18&nbsp;in</td><td class="n hm">0.67</td><td class="n nw">1.1 seeds</td><td class="n nw">109 seeds</td><td class="n">147</td></tr>
+<tr><td>Cucumber</td><td class="nw hm">1 × 48&nbsp;in</td><td class="n hm">0.25</td><td class="n nw">0.0028 oz</td><td class="n nw">0.28 oz</td><td class="n">110</td></tr>
+<tr><td>Pepper</td><td class="nw hm">2 × 18&nbsp;in</td><td class="n hm">1.33</td><td class="n nw">3 seeds</td><td class="n nw">296 seeds</td><td class="n">138</td></tr>
+</tbody></table></div>
+</div></section>
+
 <section class="alt" id="inside"><div class="w">
 <p class="kick">What's inside</p>
 <h2>9 tabs, from frost dates to a weekly task list</h2>
@@ -196,6 +284,14 @@ p,li{text-wrap:pretty}
 <div class="card"><h3>This file · $19 once</h3><ul><li>40 beds and 300 plantings, a bed check for every week, seed in whole packets, harvest value per week and per CSA share</li><li>A file you keep. You type each crop's first date (frost dates move safe dates and warnings, not plantings), and there's no drawn field map or phone app</li></ul></div>
 </div>
 <p class="note" style="margin-top:12px">Prices and features are from those products' own pages on Oct 27, 2026 and can change.</p>
+<h3 id="johnnys" style="margin:40px 0 6px;font-size:22px">Two free workbooks from Johnny's Selected Seeds, opened Oct 28, 2026</h3>
+<p class="sub" style="margin-bottom:0">We downloaded both and read their formulas. They're good, free and quick, and for some jobs they're the better pick.</p>
+<div class="cards" style="margin-top:18px">
+<div class="card"><h3>Succession-Planting Calculator · free XLSX</h3><ul><li>Type your first fall frost date, each crop's days to maturity, the days between plantings and the first date; it lists up to 8 planting dates per crop</li><li>A "final planting date" per crop, counted back from frost by days to maturity, with 14 to 21 extra days for some crops, while kale, collards and spinach may mature up to 30 days after frost</li><li>No beds, seed amounts or harvest totals</li></ul></div>
+<div class="card"><h3>Fall-Harvest Planting Calculator · free XLSX</h3><ul><li>One frost date in, a planting date out for 30 fall crops</li><li>Counts back days to maturity + an average harvest period + a "fall factor" of about 2 weeks for slower growth in fall</li><li>Dates only: no successions, beds or seed</li></ul></div>
+</div>
+<p style="margin:18px 0 0;color:var(--ink2);max-width:760px"><b>When the free one is better:</b> if you only need planting dates for a handful of crops, Johnny's succession workbook does that for $0. For fall and overwintered crops, its fall-harvest workbook is more cautious than this planner because of the fall factor; use it to choose your last fall dates, then type them here. This file earns its $19 when you also want every bed checked week by week, seed in whole packets and harvest by week.</p>
+<p class="note">Source: <a href="https://www.johnnyseeds.com/growers-library/online-tools-calculators.html" rel="noopener">Johnny's planting calculators &amp; tools</a>, files downloaded and formulas read Oct 28, 2026. Johnny's Selected Seeds isn't affiliated with Orvian Market.</p>
 </div></section>
 
 <section class="alt" id="checked"><div class="w two">
@@ -221,6 +317,10 @@ p,li{text-wrap:pretty}
 <details><summary>Can I add crops that aren't in the starter list?</summary><p>Yes. There are 26 empty Crop Library rows; fill in the numbers from your seed packet or catalog and the crop shows up in the Succession Planner.</p></details>
 <details><summary>Are the starter numbers right for my farm?</summary><p>They're averages from extension guides and a seed company chart, for other regions and varieties, and rows per bed and harvest weeks are our own estimates for a 30-inch bed. Treat them as a starting point and change any number that doesn't match your seed packets or your own records.</p></details>
 <details><summary>How big a farm does it handle?</summary><p>Up to 40 beds, 40 crop plans and 300 plantings over a 40-week window. Every bed is treated as the same length, which you set on Farm Settings.</p></details>
+<details><summary>How do I plan my last succession before first frost?</summary><p>Work back from your first fall frost date. In this planner a tender crop's harvest has to end by that date, so its latest plant-out is the frost date minus days to maturity minus the harvest window; hardy crops only need their harvest to start by it. On the made-up example farm (first frost Oct 5) that puts the last bush-bean sowing at Jul 22 and the last cucumber at Jun 25. Fall growth is slower, so leave a margin: Johnny's free fall-harvest calculator adds about 2 weeks.</p></details>
+<details><summary>Should I type the 50% or the 10% frost date?</summary><p>The 50% date is the median, so in half of years frost comes later in spring or earlier in fall. For a more cautious plan, use the 10% spring date (later) and the 10% fall date (earlier) from NOAA's frost and freeze tables for a station near you; the planner's safe dates and warnings tighten to match.</p></details>
+<details><summary>How much seed do I need for a 100-foot bed?</summary><p>It depends on rows, spacing, germination and your allowances. In the example file, head lettuce in 4 rows at 6 inches needs about 1,222 seeds for a 100 ft bed after 10% overplant, 80% germination and 10% tray loss, and carrots in 4 rows need 1.1 oz. The Seed Order tab adds up every planting and rounds to whole packets.</p></details>
+<details><summary>Do weeks in the tray count against the bed?</summary><p>No. A transplant's bed is booked from plant-out until harvest ends plus your turnaround days, so tray weeks don't block a bed. In the example, a head lettuce planting holds its bed for 89 days: 68 days to maturity, 2 weeks of harvest and 7 days to turn the bed around.</p></details>
 <details><summary>Is it a subscription?</summary><p>No. It's $19 once and the files are yours to keep and copy for next season. There's no account, no app and nothing to renew.</p></details>
 <details><summary>How do I get the files, and what if it's not right for me?</summary><p>Checkout is on Gumroad and the download link arrives right away by email. If a file won't open or isn't what you expected, reply to your Gumroad receipt within 14 days and we'll fix it or refund you.</p></details>
 </div>
