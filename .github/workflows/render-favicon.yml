@@ -1,0 +1,23 @@
+name: Decode favicons
+on:
+  push:
+    branches: [main]
+    paths: ['assets/icons/*.b64', '.github/workflows/render-favicon.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  decode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode base64 icons to site root
+        run: |
+          base64 -d assets/icons/favicon.ico.b64 > favicon.ico
+          base64 -d assets/icons/apple-touch-icon.png.b64 > apple-touch-icon.png
+      - name: Commit icons
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add favicon.ico apple-touch-icon.png
+          git diff --cached --quiet || (git commit -m "Decode favicons" && git push)
