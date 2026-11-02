@@ -62,3 +62,14 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--mute);fo
 .hero .ans p{margin:0;font-size:18px;line-height:1.55;color:#fff}.hero .ans b{color:#fff}
 .hero .ans p.ans-k{font-size:12.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#5eead4;margin:0 0 6px}
 @media print{.hero .ans{border-left-color:#0f766e;background:none}.hero .ans p{color:#000}}
+.owner-wrap{padding:28px 0 36px}
+.owner-sheets{border:1px solid var(--line);border-radius:var(--r);background:#fff;padding:18px 16px 8px;box-shadow:var(--sh);min-width:0;max-width:100%}
+.owner-sheets .k{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--acc);margin:0 0 6px}
+.owner-sheets h2{font-size:clamp(22px,3vw,26px);margin:0 0 8px}
+.owner-sheets > p{margin:0;font-size:15.5px;color:var(--ink2);overflow-wrap:anywhere}
+.owner-sheets .item{border-top:1px solid var(--line);margin-top:14px;padding-top:14px;min-width:0}
+.owner-sheets h3{margin:0 0 6px;font-size:17px}
+.owner-sheets .item p{margin:0 0 8px;font-size:15px;color:var(--ink2);overflow-wrap:anywhere}
+.owner-sheets .links{display:flex;flex-wrap:wrap;gap:6px 16px;margin:0}
+.owner-sheets .links a{font-weight:650}
+.owner-sheets .fine{font-size:13px;color:var(--mute);margin:12px 0 8px}
