@@ -6,15 +6,15 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){var t=arguments[0];if(t==='event'&&!window.__omConsent)return;dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});gtag('js',new Date());gtag('config','G-F3QH6E9QR7');
 document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="gumroad.com"]'):null;if(!a)return;var m=a.href.match(/\/l\/([^\/?#]+)/),s=m?m[1]:'';var N={"answerloft":"Answerloft","bcmhvk":"Okayline","bjkyj":"Thumbtally","ekunvc":"Proposeroo Team","ijsmuq":"PeelPixel Pro","kzjcwp":"Proposeroo Pro","lyrgdx":"Rate Calculator Spreadsheet","pckinc":"Rate-Raise Email Rewrite","kudoshelf":"Kudoshelf","proposeroo-desk":"Proposeroo Desk","proposeroo-desk-team":"Proposeroo Desk Team","ctitql":"Freelance Rate Pack","jtocar":"Client OS","vwxgu":"Prompt Pack","oellyq":"Budget Template","bffum":"Rate Mini (free)","mceana":"Freelancer Toolkit Bundle","nqpwfg":"Raise Emails (free)","junk-removal-calculator":"Junk Removal Pricing Calculator","snow-removal-calculator":"Snow Removal Pricing Calculator","food-truck-menu-costing":"Food Truck Menu Cost Calculator"};gtag('event','buy_click',{product_name:a.getAttribute('data-product')||N[s]||s||'gumroad',product_slug:s,link_url:a.href,link_text:(a.textContent||'').trim().slice(0,80),transport_type:'beacon'});},true);</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Snow Removal Pricing Calculator (Excel, Google Sheets)</title>
-<meta name="description" content="Snow removal pricing calculator spreadsheet: price every push from your own equipment, labor, fuel and de-icer costs, compare a seasonal contract with per-push billing, and track storm profit. $17 once, Excel and Google Sheets.">
+<title>Snow Removal Pricing Formula + Free Calculator (Per Push)</title>
+<meta name="description" content="The snow removal pricing formula in plain words with a worked example, plus a free per-push calculator: price floor, suggested price and profit from your costs.">
 <link rel="canonical" href="https://orvianmarketplace.com/snow-removal-pricing-calculator/">
 <meta name="theme-color" content="#0b1220">
 <meta property="og:type" content="product">
 <meta property="og:site_name" content="Orvian Market">
 <meta property="og:url" content="https://orvianmarketplace.com/snow-removal-pricing-calculator/">
-<meta property="og:title" content="Snow Removal Pricing Calculator (Excel and Google Sheets)">
-<meta property="og:description" content="Price every push from your own costs and see whether a seasonal contract or per-push billing pays you more. $17 once.">
+<meta property="og:title" content="Snow Removal Pricing Formula + Free Calculator (Per Push)">
+<meta property="og:description" content="The pricing formula, a free per-push calculator and a free contract vs per-push check. The $17 spreadsheet runs it for every client and storm.">
 <meta property="og:image" content="https://public-files.gumroad.com/ceegyahjzzjqx7cix4dhg4pzi0nb">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='800' font-size='34' fill='white' text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E">
@@ -78,6 +78,10 @@ footer{background:#0b1220;color:#9aa6b8;font-size:14px;padding:36px 0}footer a{c
 @media (max-width:860px){.tool{grid-template-columns:1fr}}
 @media (max-width:520px){.fm .row3{grid-template-columns:1fr 1fr 1fr;gap:6px}.fm .row2{grid-template-columns:1fr 1fr}}
 .tool>*,.fm .row2>*,.fm .row3>*{min-width:0}
+.fm select{display:block;width:100%;margin-top:5px;padding:10px 12px;font:inherit;font-size:16px;border:1px solid #cfd6e1;border-radius:9px;background:#fffbea}
+.fm fieldset{border:0;padding:0;margin:0 0 6px;min-width:0}.fm legend{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--acc);margin:4px 0 8px;padding:0}
+.steps{margin:0;padding-left:22px;color:var(--ink2)}.steps li{margin:0 0 8px}.fx{background:#f0fdfa;border:1px solid #99f6e4;border-radius:12px;padding:14px 18px;font-weight:650;margin:0 0 18px;color:var(--ink)}
+#pc-out{transition:opacity .15s}.flag{color:#b45309;font-weight:600;margin:8px 0 0;min-height:0}
 </style>
 </head>
 <body>
@@ -86,11 +90,11 @@ footer{background:#0b1220;color:#9aa6b8;font-size:14px;padding:36px 0}footer a{c
 <div class="hero"><div class="w">
 <div>
 <p class="crumb"><a href="/">Orvian Market</a> › Snow removal</p>
-<h1>Snow Removal Pricing Calculator</h1>
-<p class="lead">Price every push from your own equipment, labor, fuel and de-icer costs. Then see whether a seasonal contract or per-push billing pays you more, before you sign anyone for the winter.</p>
+<h1>Snow Removal Pricing Formula + Free Calculator (Per Push)</h1>
+<p class="lead">The snow removal pricing formula in plain words, a free per-push calculator and a free seasonal contract check, all on this page. The $17 spreadsheet runs the same math for every client and storm, all season.</p>
 <p class="price"><b>$17</b><span>one-time · Excel and Google Sheets</span></p>
 <div class="ctas"><a class="btn pri" data-product="Snow Removal Pricing Calculator" href="https://jhodges6.gumroad.com/l/snow-removal-calculator?utm_source=orvianmarketplace&utm_medium=site&utm_campaign=snow-landing&utm_content=hero">Buy for $17 on Gumroad</a><a class="btn sec" href="#example">See a worked example</a></div>
-<p style="margin:14px 0 0;font-size:15px"><a href="#check">Or run the free contract vs per-push check first</a></p>
+<p style="margin:14px 0 0;font-size:15px"><a href="#calc">Use the free per-push calculator</a> · <a href="#formula">See the formula</a> · <a href="#check">Contract vs per-push check</a></p>
 <ul class="ck">
 <li>Instant download: blank file, filled-in example file and a 2-page Start Here PDF</li>
 <li>Excel 2016 or newer and Google Sheets. No macros, no app, no login</li>
@@ -99,6 +103,173 @@ footer{background:#0b1220;color:#9aa6b8;font-size:14px;padding:36px 0}footer a{c
 </div>
 <img class="shot" src="/assets/snow-quote.svg" width="1200" height="900" alt="Quote Calculator result with price floor, suggested price per push, costs and take-home per labor hour, example data">
 </div></div>
+
+<section id="formula"><div class="w">
+<p class="kick">The math, in plain words</p>
+<h2>Snow removal pricing formula</h2>
+<p class="sub">Work out what one push really costs you, then divide by what's left of the price after your card fee and the profit you want to keep.</p>
+<div class="two">
+<div>
+<p class="fx">Price floor = (cost per push + card fixed fee) ÷ (1 − card fee % − target margin)<br>Suggested price = the floor rounded up to your price step, never below your minimum charge</p>
+<p style="margin:0 0 8px;font-weight:650">Cost per push, line by line</p>
+<ol class="steps">
+<li><b>Clearing time</b> = area ÷ your clearing rate (sq ft per hour) × the depth multiplier. Walks get the same treatment with their own clearing rate.</li>
+<li><b>Job hours</b> = clearing time + setup + travel to the site.</li>
+<li><b>Labor</b> = job hours × what you pay per hour (you and any helpers).</li>
+<li><b>Equipment</b> = clearing hours × each machine's cost per hour, not counting fuel.</li>
+<li><b>Fuel</b> and <b>de-icer</b> for that visit (de-icer = pounds spread × cost per pound).</li>
+<li><b>Overhead</b> per push: insurance, phone, software and the rest, spread over your visits.</li>
+</ol>
+<p style="color:var(--mute);font-size:15.5px;margin:12px 0 0">Without a card fee the formula is just cost ÷ (1 − target margin). With no margin at all, it gives the break-even price.</p>
+</div>
+<div>
+<div class="card"><h3>Worked example (made-up numbers)</h3>
+<p style="margin:0 0 10px;color:var(--ink2);font-size:15.5px">The same driveway as the example file below: 2,400 sq ft plus 300 sq ft of walks, 4 inches of snow, 35% target margin, card at 2.9% + $0.30.</p>
+<ol class="steps" style="font-size:15.5px">
+<li>Clearing: 2,400 ÷ 18,000 × 1.35 = 0.18 h with the plow; 300 ÷ 2,500 × 1.35 = 0.162 h on the walks with a blower.</li>
+<li>Job hours: 0.18 + 0.162 + 10 min setup + 8 min travel = 0.64 h.</li>
+<li>Cost: equipment $9.07 + fuel $1.79 + de-icer $9.50 + labor $19.26 + overhead $6.00 = <b>$45.62</b>.</li>
+<li>Floor: ($45.62 + $0.30) ÷ (1 − 0.029 − 0.35) = $45.92 ÷ 0.621 = <b>$73.95</b>.</li>
+<li>Suggested: rounded up to the next $5 = <b>$75.00</b> (above the $45 minimum).</li>
+<li>Check: card fee $2.48, profit $75.00 − $45.62 − $2.48 = <b>$26.90</b>, 35.9% of the price.</li>
+</ol></div>
+</div>
+</div>
+<h3 style="margin:34px 0 10px;font-size:20px">Per inch, per hour, per sq ft and seasonal</h3>
+<div class="cards">
+<div class="card"><h3>By snow depth (per inch)</h3><p style="margin:0;color:var(--ink2)">Deeper snow mostly costs you time, so depth works as a multiplier on clearing time rather than a flat amount per inch. The example tiers are under 2 in ×1.0, 2 to under 4 in ×1.15, 4 to under 6 in ×1.35, 6 to under 9 in ×1.7, 9 to under 12 in ×2.1 and 12 in or more ×2.8. These are made-up starting points; time a few of your own pushes and replace them. Run the formula once per tier and you have a price list by depth (the calculator below does that).</p></div>
+<div class="card"><h3>Per hour and per sq ft</h3><p style="margin:0;color:var(--ink2)">These are the per-push price seen another way, not separate methods. In the example, $75.00 ÷ 0.642 job hours is about $116.82 per job hour, and $75.00 ÷ 2,700 sq ft is $27.78 per 1,000 sq ft. They only carry over to sites with similar size, layout, depth and drive time, so work each site out from its own costs.</p></div>
+<div class="card"><h3>Seasonal contract</h3><p style="margin:0;color:var(--ink2)">Contract floor = (normal-season events × cost per push + season costs for the client + card fixed fee × number of payments) ÷ (1 − card fee % − target margin). For the example, 12 events, $25 of season costs and 4 card payments give $923.79, rounded up to $925. Then check a heavy winter with the <a href="#check">contract check</a>.</p></div>
+<div class="card"><h3>What the formula leaves to you</h3><p style="margin:0;color:var(--ink2)">Your clearing rates, depth multipliers, pay and overhead are your numbers, and they decide the price. Nothing here is a typical or market rate; compare the result with what you know of local prices before you quote.</p></div>
+</div>
+</div></section>
+
+<section class="alt" id="calc"><div class="w">
+<p class="kick">Free calculator, no download</p>
+<h2>Snow removal price per push, from your own costs</h2>
+<p class="sub">Type your site and your costs. It shows the job hours, cost per push, price floor, suggested price and profit. It runs in your browser; nothing you type is stored or sent. The defaults are the made-up example above.</p>
+<div class="tool">
+<form class="fm" id="pc" onsubmit="return false" autocomplete="off">
+<fieldset><legend>The site</legend>
+<div class="row2">
+<label>Area to plow (sq ft)<input type="number" id="pc-area" min="0" step="1" value="2400" inputmode="decimal"></label>
+<label>Clearing rate (sq ft/hr)<input type="number" id="pc-rate" min="0" step="1" value="18000" inputmode="decimal"></label>
+</div>
+<div class="row2">
+<label>Walks (sq ft, 0 if none)<input type="number" id="pc-walks" min="0" step="1" value="300" inputmode="decimal"></label>
+<label>Walks rate (sq ft/hr)<input type="number" id="pc-wrate" min="0" step="1" value="2500" inputmode="decimal"></label>
+</div>
+<div class="row2">
+<label>Snow depth<select id="pc-tier"><option value="0">0–2 in</option><option value="1">2–4 in</option><option value="2" selected>4–6 in</option><option value="3">6–9 in</option><option value="4">9–12 in</option><option value="5">12+ in</option><option value="c">Custom</option></select></label>
+<label>Depth time multiplier<input type="number" id="pc-mult" min="0" step="0.01" value="1.35" inputmode="decimal"></label>
+</div>
+<div class="row2">
+<label>Setup (minutes)<input type="number" id="pc-setup" min="0" step="1" value="10" inputmode="decimal"></label>
+<label>Travel (minutes)<input type="number" id="pc-travel" min="0" step="1" value="8" inputmode="decimal"></label>
+</div>
+</fieldset>
+<fieldset><legend>Your costs</legend>
+<div class="row3">
+<label>Labor $/hr<input type="number" id="pc-labor" min="0" step="0.01" value="30" inputmode="decimal"></label>
+<label>Plow $/hr<input type="number" id="pc-eq" min="0" step="0.01" value="45" inputmode="decimal"></label>
+<label>Walks $/hr<input type="number" id="pc-weq" min="0" step="0.01" value="6" inputmode="decimal"></label>
+</div>
+<div class="row3">
+<label>Fuel $/push<input type="number" id="pc-fuel" min="0" step="0.01" value="1.79" inputmode="decimal"></label>
+<label>De-icer $/push<input type="number" id="pc-deice" min="0" step="0.01" value="9.50" inputmode="decimal"></label>
+<label>Overhead $/push<input type="number" id="pc-over" min="0" step="0.01" value="6" inputmode="decimal"></label>
+</div>
+</fieldset>
+<fieldset><legend>Your price rules</legend>
+<div class="row3">
+<label>Target margin %<input type="number" id="pc-margin" min="0" step="0.1" value="35" inputmode="decimal"></label>
+<label>Card fee %<input type="number" id="pc-pct" min="0" step="0.01" value="2.9" inputmode="decimal"></label>
+<label>Card fixed $<input type="number" id="pc-fix" min="0" step="0.01" value="0.30" inputmode="decimal"></label>
+</div>
+<div class="row2">
+<label>Minimum charge ($)<input type="number" id="pc-min" min="0" step="1" value="45" inputmode="decimal"></label>
+<label>Round up to ($)<input type="number" id="pc-step" min="0" step="1" value="5" inputmode="decimal"></label>
+</div>
+</fieldset>
+<p class="note" style="margin:0 0 10px">Labor $/hr is everyone's pay per job hour combined. Equipment $/hr excludes fuel. Set the card fee to 0 for cash or check. Round up to 0 means no rounding. A depth right on a tier boundary (say 4 in) uses the deeper tier.</p>
+</form>
+<div class="res" aria-live="polite">
+<p id="pc-err" class="flag"></p>
+<div id="pc-out">
+<div class="tw"><table>
+<thead><tr><th>Per push</th><th class="n">Result</th></tr></thead><tbody>
+<tr><td>Job hours (clearing, setup, travel)</td><td class="n" id="pc-hrs"></td></tr>
+<tr class="tot"><td>Cost per push</td><td class="n" id="pc-cost"></td></tr>
+<tr><td>Price floor at your margin</td><td class="n" id="pc-floor"></td></tr>
+<tr class="tot"><td>Suggested price per push</td><td class="n" id="pc-sugg"></td></tr>
+<tr><td>Card fee</td><td class="n" id="pc-fee"></td></tr>
+<tr class="tot"><td>Profit per push</td><td class="n" id="pc-profit"></td></tr>
+</tbody></table></div>
+<div class="big"><p><b style="font-size:26px;display:block;line-height:1.15;margin-bottom:6px" id="pc-take"></b>Take-home: what the push pays per job hour after equipment, fuel, de-icer, overhead and the card fee. <span id="pc-conv"></span></p></div>
+<p id="pc-flag" class="flag"></p>
+<h3 style="margin:22px 0 8px;font-size:17px">Same site, priced at each depth tier</h3>
+<div class="tw"><table>
+<thead><tr><th>Depth</th><th class="n">Time</th><th class="n">Cost</th><th class="n">Price</th></tr></thead>
+<tbody id="pc-tiers"></tbody></table></div>
+<p class="note">Fuel and de-icer stay as typed at every depth here; in the spreadsheet fuel follows machine hours and de-icer follows the area and pounds per 1,000 sq ft, so its numbers can differ a little. With the defaults, the cost, floor, suggested price, card fee, profit and take-home match the example file to the cent.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:16px"><button type="button" class="btn sec" id="pc-send" style="cursor:pointer;font:inherit;font-weight:650">Use this price and cost in the contract check</button>
+<a class="btn pri" data-product="Snow Removal Pricing Calculator" href="https://jhodges6.gumroad.com/l/snow-removal-calculator?utm_source=orvianmarketplace&utm_medium=site&utm_campaign=snow-landing&utm_content=calc">Get the full spreadsheet for $17</a></div>
+<p style="margin:14px 0 0;color:var(--ink2);font-size:15.5px">This calculator prices one site, one push. The $17 spreadsheet adds an equipment table (up to 12 machines with clearing rate, cost and fuel per hour), editable depth tiers, the season compare, 60 clients with routes, a 500-visit storm log, a season P&L and a printable quote.</p>
+</div>
+</div>
+</div>
+</div></section>
+<script>
+function r2(v){return Math.round((v+(v<0?-1e-9:1e-9))*100)/100}
+function snowCalc(x){
+var r={err:''};
+if(!(x.area>0))r.err='Type the area to clear (sq ft), above 0.';
+else if(!(x.rate>0))r.err='Type the clearing rate (sq ft per hour), above 0.';
+else if(!(x.walks>=0))r.err='Type the walks area (0 if none).';
+else if(x.walks>0&&!(x.wrate>0))r.err='Type the walks clearing rate (sq ft per hour), above 0.';
+else if(!(x.mult>0))r.err='The depth multiplier must be above 0.';
+else{var k=['setup','travel','labor','eq','weq','fuel','deice','over','margin','pct','fix','min','step'];
+for(var i=0;i<k.length;i++){if(!(x[k[i]]>=0)){r.err='Type a number of 0 or more in every box.';break}}}
+if(!r.err&&x.pct+x.margin>=100)r.err='Card fee % plus target margin % must be under 100%.';
+if(r.err)return r;
+var plow=x.area/x.rate*x.mult,walk=x.walks>0?x.walks/x.wrate*x.mult:0;
+var travel=x.travel/60,job=plow+walk+x.setup/60+travel;
+var labor=job*x.labor,equip=plow*x.eq+walk*x.weq;
+var cost=equip+x.fuel+x.deice+labor+x.over,pc=x.pct/100,mg=x.margin/100;
+var floor=(cost+x.fix)/(1-pc-mg);
+var sugg=x.step>0?Math.ceil(Math.round(floor/x.step*1e6)/1e6)*x.step:floor;
+if(sugg<x.min)sugg=x.min;
+var fee=sugg*pc+x.fix,profit=sugg-cost-fee;
+r.plow=plow;r.walk=walk;r.job=job;r.labor=labor;r.equip=equip;r.cost=cost;r.floor=floor;r.sugg=sugg;r.fee=fee;r.profit=profit;
+r.marginPct=sugg>0?profit/sugg*100:0;
+r.take=job>0?(sugg-(cost-labor)-fee)/job:0;
+r.hourly=job>0?sugg/job:0;
+r.per1000=sugg/(x.area+x.walks)*1000;
+return r}
+(function(){var $=function(i){return document.getElementById(i)},used=false,last=null;
+function m(x){var v=r2(x),a=Math.abs(v);return (v<0?'\u2212$':'$')+a.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}
+function v(i){var e=$(i);return e.value===''?NaN:Number(e.value)}
+var T=[['Under 2 in',1],['2 to under 4 in',1.15],['4 to under 6 in',1.35],['6 to under 9 in',1.7],['9 to under 12 in',2.1],['12 in or more',2.8]];
+var F=['area','rate','walks','wrate','mult','setup','travel','labor','eq','weq','fuel','deice','over','margin','pct','fix','min','step'];
+function read(){var x={};F.forEach(function(k){x[k]=v('pc-'+k)});return x}
+function run(){var x=read(),r=snowCalc(x);$('pc-err').textContent=r.err;
+if(r.err){$('pc-out').style.opacity='.45';last=null;return}
+$('pc-out').style.opacity='';last=r;
+$('pc-hrs').textContent=r2(r.job).toFixed(2)+' h';$('pc-cost').textContent=m(r.cost);$('pc-floor').textContent=m(r.floor);
+$('pc-sugg').textContent=m(r.sugg);$('pc-fee').textContent=m(r.fee);$('pc-profit').textContent=m(r.profit);
+$('pc-take').textContent=m(r.take)+' per job hour';
+$('pc-conv').textContent='That price works out to '+m(r.hourly)+' per job hour and '+m(r.per1000)+' per 1,000 sq ft cleared ('+r2(r.marginPct).toFixed(1)+'% profit on the price).';
+$('pc-flag').textContent=r.profit<0?'This price loses money: raise the minimum charge or cut costs.':(r.sugg===x.min&&x.min>r.floor?'Your minimum charge sets this price; the floor is lower.':'');
+var rows='';T.forEach(function(t){var y={};for(var k in x)y[k]=x[k];y.mult=t[1];var q=snowCalc(y);rows+='<tr><td>'+t[0]+'</td><td class="n">\u00d7'+t[1]+'</td><td class="n">'+m(q.cost)+'</td><td class="n">'+m(q.sugg)+'</td></tr>'});
+$('pc-tiers').innerHTML=rows;
+if(!used&&window.__pcReady){used=true;if(window.gtag)gtag('event','tool_use',{tool_name:'snow_price_calc'})}}
+$('pc-tier').addEventListener('change',function(){var t=T[+this.value];if(t){$('pc-mult').value=t[1]}run()});
+$('pc-mult').addEventListener('input',function(){var mv=v('pc-mult'),ix=-1;T.forEach(function(t,i){if(t[1]===mv)ix=i});$('pc-tier').value=ix<0?'c':String(ix)});
+$('pc').addEventListener('input',run);
+$('pc-send').addEventListener('click',function(){if(!last)return;$('sc-price').value=r2(last.sugg).toFixed(2);$('sc-cost').value=r2(last.cost).toFixed(2);
+$('sc-pct').value=v('pc-pct');$('sc-fix').value=v('pc-fix');$('sc').dispatchEvent(new Event('input',{bubbles:true}));location.hash='#check'});
+run();window.__pcReady=true;})();
+</script>
 
 <section id="example"><div class="w">
 <p class="kick">Worked example (made-up numbers)</p>
@@ -181,7 +352,7 @@ footer{background:#0b1220;color:#9aa6b8;font-size:14px;padding:36px 0}footer a{c
 <tbody id="sc-body"><tr><td colspan="5">Type your numbers to see the result.</td></tr></tbody></table></div>
 <div class="big"><p id="sc-be"><b style="font-size:24px;display:block;line-height:1.15;margin-bottom:6px">&nbsp;</b>&nbsp;</p></div>
 <p class="note">Defaults are the made-up example above (cost rounded to the cent, so results can differ by a few cents). If your own pay isn't in your cost per push, the profit shown includes it. No weather forecast is made: the event counts are yours. Not legal or financial advice; put contract terms in writing.</p>
-<p style="margin:18px 0 8px;color:var(--ink2)">This check takes one cost per push from you. The $17 spreadsheet works that cost out from your equipment, fuel, de-icer, labor and overhead, sets a price floor and a suggested contract price, caps the events a contract covers, and logs every storm into a season P&L.</p>
+<p style="margin:18px 0 8px;color:var(--ink2)">This check takes one cost per push from you (the <a href="#calc">free per-push calculator</a> above can fill it in). The $17 spreadsheet works that cost out from your equipment, fuel, de-icer, labor and overhead, sets a price floor and a suggested contract price, caps the events a contract covers, and logs every storm into a season P&L.</p>
 <a class="btn pri" data-product="Snow Removal Pricing Calculator" href="https://jhodges6.gumroad.com/l/snow-removal-calculator?utm_source=orvianmarketplace&utm_medium=site&utm_campaign=snow-landing&utm_content=tool">Get the full calculator for $17</a>
 </div>
 </div>
@@ -248,6 +419,9 @@ $('sc').addEventListener('input',run);run();window.__scReady=true;})();
 <section class="alt" id="faq"><div class="w">
 <h2>Questions</h2>
 <div style="margin-top:20px">
+<details><summary>What is the snow removal pricing formula?</summary><p>Price floor = (your cost per push + any card fixed fee) ÷ (1 − card fee % − target margin). Cost per push is labor, equipment, fuel, de-icer and overhead for one visit, with clearing time set by the area, your clearing rate and a snow depth multiplier. Round the floor up to a price you would quote, and never go below your minimum charge. The worked example on this page goes from $45.62 of cost to a $75.00 price.</p></details>
+<details><summary>How do I price commercial snow removal?</summary><p>Use the same formula with the lot's numbers: plowable area and the clearing rate of the machine you use there, everyone's pay while on site, de-icer for the area you treat, and travel. Price each lot on its own; the free calculator handles one site at a time. If the lot is on a seasonal contract, run the contract check on this page with low, normal and high event counts from your own past winters, and put the terms in a written agreement.</p></details>
+<details><summary>Is this snow removal calculator free?</summary><p>Yes. The per-push calculator and the contract vs per-push check on this page are free, with no signup, and what you type stays in your browser. The $17 spreadsheet is the paid upgrade: an equipment table for up to 12 machines, editable depth tiers, a season compare with an events cap, 60 clients with routes, a 500-visit storm log, a season P&amp;L and a printable quote.</p></details>
 <details><summary>Does it work in Google Sheets?</summary><p>Yes. It's a regular .xlsx file with standard formulas and no macros. Open it in Excel 2016 or newer, or in Google Sheets use File → Import → Upload.</p></details>
 <details><summary>Can I change the snow depth tiers?</summary><p>Yes. The tiers and their time multipliers are an editable table on Settings.</p></details>
 <details><summary>What if my contract covers only some events?</summary><p>Type how many events it covers on Season Compare. Extra events are billed at your per-push price.</p></details>
